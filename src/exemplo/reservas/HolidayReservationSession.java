@@ -9,8 +9,7 @@ public class HolidayReservationSession extends Component {
 		super("Holiday reservation session component");
 	}
 
-	@Service(name="confirmReservation", 
-			requiredServices="ICarRe,IAirRes,IHotelRes")
+	@Service(name="confirmReservation")
 	public void confirm(Reservation r) {
 		requestService("ICarRe", r.getCar());
 		requestService("IAirRes", r.getAir());
