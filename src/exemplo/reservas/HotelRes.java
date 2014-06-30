@@ -9,8 +9,7 @@ public class HotelRes extends Component {
 		super("Hotel reservation component");
 	}
 
-	@Service(name="IHotelRes",
-			requiredServices="IBilling,ILoyaltyProgram")
+	@Service(name="IHotelRes")
 	public void reserveHotel(Hotel h) {
 		System.out.println("Hotel: " + h.getName());
 		requestService("IBilling", h.getValue());
